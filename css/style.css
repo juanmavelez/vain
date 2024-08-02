@@ -1,0 +1,99 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+:root {
+  --primary-color: #007cc4;
+  --secondary-color: #005587;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*** Header ***/
+
+.header {
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.header-list {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.header-list-item{
+  display: flex;
+  align-items: center;
+}
+
+.header-list-item:nth-child(2){
+  margin-left: auto;
+}
+
+.header-logos {
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+}
+
+
+/*** Main ***/
+
+/** Main Section **/
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-section-content {
+  padding: 1rem;
+}
+
+.main-section-video{
+  aspect-ratio: 1;
+}
+
+@media all and (min-width: 764px) {
+  .main-section {
+    flex-direction: row;
+  }
+
+  .main-section-video{
+    aspect-ratio: unset;
+  }
+}
+
+/** Secondary Section **/
+
+.secondary-section {
+  display: grid;
+}
+
+.secondary-section-list {
+  max-width: 100%;
+  overflow: hidden;
+  display: grid;
+}
+
+@media all and (min-width: 764px) {
+  .secondary-section-list {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+  }
+}
+
